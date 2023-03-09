@@ -1,0 +1,17 @@
+{
+  "name": "weather-server",
+  "version": "0.0.1",
+  "description": "A server nodejs app for weather forecasts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "type": "module",
+  "author": "Dima Sandakov <marqpeo@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "undici": "^5.20.0"
+  }
+}
