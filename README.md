@@ -14,7 +14,7 @@ This is a pure Node.js server application that serves as a REST API. It uses onl
 
 ### Response type
 
-All responses will be a JSON object with the following properties:
+All responses body will be a JSON object with the following fields:
 
 ```
 {
@@ -29,16 +29,27 @@ All responses will be a JSON object with the following properties:
 At the moment, this API has only two methods - "geocoding" and "get-weather-daily".
 
 ### 📍 `/geocoding`
-This method allows you to retrieve the longitude and latitude of the desired city by it's name.
+This method retrieves the longitude and latitude of the desired city by it's name. Allows to use as a language English, Spanish and Russian.
 
-To retrieve them, make a GET request to `/api/geocoding` with only 1 query `name`.
+To retrieve them, make a GET request to `/api/geocoding` with the following queries:
+
+| Parameter | Format | Required | Default | Description |
+| --------- | ------ | -------- | ------- | ----------- |
+| name      | string | Yes      |         | String to search for city by the name |
+| lang      | string | No       | `en`    | Return translated results, if available, otherwise return english or the native location name. Lower-cased. <br/> Options - `en`, `es`, `ru`|
 
 Example - `/api/geocoding?name=London`  ([try](https://weather-sand.onrender.com/api/geocoding?name=London))
 
 ### ⛅ `/get-weather-daily`
+
 This method retrieves the average weather forecast for the next 7 days for a given longitude and latitude.
 
-To retrieve it, make a GET request to `/api/get-weather-daily` with two required queries: `lon` and `lat`. 
+To retrieve it, make a GET request to `/api/get-weather-daily` with the following queries:
+
+| Parameter | Format.        | Required | Default | Description |
+| --------- | -------------- | -------- | ------- | ----------- |
+| lat       | floating point | Yes      |         | latitude geographical coordinate of the location |
+| lon       | floating point | Yes      |	      | longitude geographical coordinate of the location |
 
 Example - `/api/get-weather-daily?lat=51.50853&lon=-0.12574`  ([try](https://weather-sand.onrender.com/api/get-weather-daily?lat=51.50853&lon=-0.12574))
 
@@ -50,7 +61,7 @@ This application has only two dependencies:
 
 ## 🗓️ Roadmap
 
-- [ ]   Add localization for "geocoding"
+- [x]   ~~Add localization for "geocoding"~~
 - [ ]   Start writing documentation [on the main page](https://weather-sand.onrender.com/)
 - [ ]  	Add hourly forecast
 - [ ]   Add more API sources (up to 5 at this stage)
