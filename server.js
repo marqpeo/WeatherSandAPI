@@ -28,13 +28,13 @@ http
         const method = api.get(methodUrl);
         const result = await method(req, res);
         if (!result) {
-          httpError(res, 500, MyResponse.error({ en: 'Server Error' }));
+          httpError(res, 500, MyResponse.error({ message: 'Server Error' }));
           return;
         }
         res.end(result);
       } catch (err) {
         console.dir({ err });
-        httpError(res, 500, MyResponse.error({ en: 'Server Error' }));
+        httpError(res, 500, MyResponse.error({ message: 'Server Error' }));
       }
     } else {
       const path = `./static/${first}`;
@@ -42,7 +42,7 @@ http
         const data = await fs.promises.readFile(path);
         res.end(data);
       } catch (err) {
-        httpError(res, 404, MyResponse.error({ en: 'File is not found' }));
+        httpError(res, 404, MyResponse.error({ message: 'File is not found' }));
       }
     }
   })
