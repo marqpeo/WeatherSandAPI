@@ -23,6 +23,9 @@ http
     const [first, ...rest] = url.substring(1).split('/');
     if (first === 'api' && rest[0] !== '') {
       res.setHeader('content-type', 'application/json; charset=utf-8');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+      res.setHeader('Access-Control-Max-Age', 2592000);
       try {
         const methodUrl = rest.join('/').split('?')[0];
         const method = api.get(methodUrl);
