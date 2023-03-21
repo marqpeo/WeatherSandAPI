@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "DEV_MODE=true node --watch server.js "
   },
   "type": "module",
   "author": "Dima Sandakov <marqpeo@gmail.com>",

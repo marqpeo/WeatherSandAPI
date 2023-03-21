@@ -8,7 +8,7 @@ Have you ever had to open 2-3 applications to check the weather and mentally est
 
 This is a pure Node.js server application that serves as a REST API. It uses only two libraries - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
 
-(There will be also a frontend app based on this API, stay tuned)
+[A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp)
 
 ## API usage
 
@@ -38,7 +38,7 @@ To retrieve them, make a GET request to `/api/geocoding` with the following quer
 | name      | string | Yes      |         | String to search for city by the name |
 | lang      | string | No       | `en`    | Return translated results, if available, otherwise return english or the native location name. Lower-cased. <br/> Options - `en`, `es`, `ru`|
 
-Example - `/api/geocoding?name=London`  ([try](https://weather-sand.onrender.com/api/geocoding?name=London))
+Example - `/api/geocoding?name=Londres&lang=es`  ([try](https://weather-sand.onrender.com/api/geocoding?name=Londres&lang=es))
 
 ### ⛅ `/get-weather-daily`
 
@@ -62,10 +62,10 @@ This application has only two dependencies:
 ## 🗓️ Roadmap
 
 - [x]   ~~Add localization for "geocoding"~~
-- [ ]   Start writing documentation [on the main page](https://weather-sand.onrender.com/)
+- [x]   ~~Frontend app based on this API~~ - started
 - [ ]  	Add hourly forecast
 - [ ]   Add more API sources (up to 5 at this stage)
-- [ ]   Frontend app based on this API
+- [ ]   ? Start writing documentation [on the main page](https://weather-sand.onrender.com/)
 - [ ]   ?
 
 <p align="right"><a href="#top">back to top</a></p>
