@@ -17,8 +17,7 @@ fastify.addHook('preHandler', (req,reply, done) => {
 fastify.register(routes);
 
 
-fastify.listen({ port: 4000 }, function(err, address){
-  // console.log(process.env.DEV_MODE);
+fastify.listen({ port }, function(err, address){
   if(err){
     fastify.log.error(err);
     process.exit(1);
