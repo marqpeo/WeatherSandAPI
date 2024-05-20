@@ -1,12 +1,12 @@
 <div id="top"></div>
 
-# WeatherSand (Node.js)
+# WeatherSand API
 
 ## Idea & Description
 
 Have you ever had to open 2-3 applications to check the weather and mentally estimate the approximate temperature and the probability of precipitation? Well, I really hope so, because this node.js application provides a simple tool to retrieve the average weather forecast for the next 7 days for any location in the world(almost) from different sources. And so far there are 3 of them, but the number of data sources will grow.
 
-This is a Fastify server application that serves as a REST API. It uses only two libraries additional - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
+This is a Fastify server application that serves as a REST API. It uses only two additional libraries - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
 
 [A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp) (Sorry, it's temporary hidden)
 
