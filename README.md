@@ -6,9 +6,9 @@
 
 Have you ever had to open 2-3 applications to check the weather and mentally estimate the approximate temperature and the probability of precipitation? Well, I really hope so, because this node.js application provides a simple tool to retrieve the average weather forecast for the next 7 days for any location in the world(almost) from different sources. And so far there are 3 of them, but the number of data sources will grow.
 
-This is a pure Node.js server application that serves as a REST API. It uses only two libraries - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
+This is a Fastify server application that serves as a REST API. It uses only two libraries additional - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
 
-[A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp)
+[A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp) (Sorry, it's temporary hidden)
 
 ## API usage
 
@@ -54,10 +54,11 @@ To retrieve it, make a GET request to `/api/get-weather-daily` with the followin
 Example - `/api/get-weather-daily?lat=51.50853&lon=-0.12574`  ([try](https://weather-sand.onrender.com/api/get-weather-daily?lat=51.50853&lon=-0.12574))
 
 ## Dependencies
-This application has only two dependencies:
+This application has only 3 dependencies:
 
-  1. [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects.
-  2. [undici](https://github.com/nodejs/undici) - An HTTP/1.1 client, written from scratch for Node.js. In the project is used to fetch data from multiple APIs for calculating the result forecast.
+  1. [fastify](https://github.com/fastify/fastify)
+  2. [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects.
+  3. [undici](https://github.com/nodejs/undici) - An HTTP/1.1 client, written from scratch for Node.js. In the project is used to fetch data from multiple APIs for calculating the result forecast.
 
 ## 🗓️ Roadmap
 
