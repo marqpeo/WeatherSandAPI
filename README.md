@@ -8,7 +8,7 @@ Have you ever had to open 2-3 applications to check the weather and mentally est
 
 This is a Fastify server application that serves as a REST API. It uses only two additional libraries - dotenv and undici (more info below). It can easily be integrated into any web or mobile application that requires weather data.
 
-[A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp) (Sorry, it's temporary hidden)
+[A frontend app based on this API](https://github.com/marqpeo/WeatherSandApp)
 
 ## API usage
 
